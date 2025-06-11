@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приглашение на свадьбу Кирилла и Валентины | 23 сентября 2025</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --color-primary:#3eb5c0;   /* бирюза моря  */
+      --color-accent:#e07a5f;    /* терракота крыш */
+      --color-bg:#ffffff;
+      --color-text:#333;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:var(--color-bg);color:var(--color-text);line-height:1.6;scroll-behavior:smooth}
+    h1,h2,h3{font-family:'Great Vibes',cursive;color:var(--color-accent)}
+    section{padding:80px 20px;text-align:center}
+    /* ─── Hero ─────────────────────────────────────────────────── */
+    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+          background:url('hero-bg.jpg') center/cover no-repeat;position:relative;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.4)}
+    .hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.25)}
+    .hero>*{position:relative;z-index:1}
+    .hero h1{font-size:64px;margin-bottom:10px}
+    .hero p.date{font-size:24px;letter-spacing:2px}
+    .btn{display:inline-block;margin-top:30px;padding:12px 30px;border-radius:30px;background:var(--color-primary);color:#fff;
+         text-decoration:none;font-weight:600;transition:transform .3s}
+    .btn:hover{transform:translateY(-3px)}
+    /* ─── Countdown ────────────────────────────────────────────── */
+    .countdown{display:flex;justify-content:center;gap:20px;font-size:28px;font-weight:600}
+    .countdown div{background:var(--color-primary);color:#fff;padding:15px 20px;border-radius:10px;min-width:80px}
+    /* ─── Story ───────────────────────────────────────────────── */
+    .story{display:flex;flex-wrap:wrap;align-items:center;gap:40px;max-width:900px;margin:0 auto}
+    .story img{width:100%;max-width:400px;border-radius:20px;box-shadow:0 10px 20px rgba(0,0,0,.1)}
+    /* ─── Schedule ────────────────────────────────────────────── */
+    .schedule table{margin:0 auto;border-collapse:collapse;width:90%;max-width:600px}
+    .schedule th,.schedule td{border-bottom:1px solid #ddd;padding:12px}
+    .schedule th{background:var(--color-primary);color:#fff}
+    /* ─── Map & Gallery ───────────────────────────────────────── */
+    .map iframe{width:100%;height:350px;border:0}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;max-width:1000px;margin:40px auto 0}
+    .gallery-grid img{width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;transition:transform .3s}
+    .gallery-grid img:hover{transform:scale(1.05)}
+    /* ─── Footer ──────────────────────────────────────────────── */
+    footer{background:var(--color-primary);color:#fff;padding:40px 20px}
+    footer nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:600}
+    /* ─── Fade-in Animation ───────────────────────────────────── */
+    .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+    /* ─── Forms / Inputs ──────────────────────────────────────── */
+    input,button{padding:10px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;width:100%;max-width:300px}
+    button{border:none;background:var(--color-accent);color:#fff;font-weight:600;cursor:pointer}
+    button:hover{opacity:.9}
+
+
+    /* ─── Modal ─────────────────────────────────────────── */
+.modal{
+  display:none;position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,.6);justify-content:center;align-items:center;z-index:999;
+}
+.modal-content{
+  background:#fff;padding:30px;border-radius:20px;max-width:400px;width:90%;
+  text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.2);position:relative;
+}
+.close{
+  position:absolute;top:10px;right:15px;font-size:28px;font-weight:700;cursor:pointer;color:#888;
+}
+.gift-options{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:25px}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ╭─ Hero ────────────────────────────────╮ -->
+  <header class="hero" id="hero">
+    <h1>Кирилл & Валентина</h1>
+    <p class="date">23 сентября 2025 • Эллиас Гарден • Айя-Напа, Кипр</p>
+    <a href="#details" class="btn">Узнать детали</a>
+  </header>
+
+  <main id="details">
+
+    <!-- Countdown -->
+    <section class="fade-in" id="countdown">
+      <h2>До нашего дня осталось</h2>
+      <div class="countdown" id="timer">
+        <div><span id="days">0</span><br>Дней</div>
+        <div><span id="hours">0</span><br>Часов</div>
+        <div><span id="minutes">0</span><br>Минут</div>
+        <div><span id="seconds">0</span><br>Секунд</div>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="story fade-in" id="story">
+      
+      <div>
+        <h2>Дорогие друзья и уважаемые гости!</h2>
+        <p>С радостью и трепетом в сердце приглашаем вас разделить с нами особенный и долгожданный день —
+день нашей свадьбы!
+
+💍
+Мы говорим друг другу “Да!” и начинаем новую главу нашей жизни.
+И будет огромной честью и радостью видеть вас рядом в этот волнующий момент.</p>
+      </div>
+      <img src="us_cartoon.png" alt="Наша история" style="display:block;margin:0 auto;width:100%;max-width:400px;border-radius:20px;box-shadow:0 10px 20px rgba(0,0,0,.1)">
+    </section>
+
+    <!-- Schedule -->
+    <section class="schedule fade-in" id="schedule">
+      <h2>Программа дня</h2>
+      <table>
+        <thead><tr><th>Время</th><th>Событие</th><th>Локация</th></tr></thead>
+        <tbody>
+          <tr><td>15:00</td><td>Наша фотосессия</td><td>На белых скалах</td></tr>
+          <tr><td>18:00</td><td>Церемония</td><td>Эллиас Гарден</td></tr>
+          <tr><td>18:30</td><td>Аперитив & фотосессия</td><td>Лаунж-терраса</td></tr>
+          <tr><td>20:00</td><td>Ужин</td><td>Уточняется</td></tr>
+          <tr><td>21:00</td><td>Танцы и веселье</td><td>До утра</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Map / Travel -->
+    <section class="map fade-in" id="travel">
+      <h2>Как добраться</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1018.9319965918843!2d34.04099623489659!3d35.01854274122017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfc4229f5b7451%3A0xac5e45a11b6d1bab!2zMjI5UitITVcsIM6gz4HOv8-Gzq7PhM63IM6XzrvOr86xLCBQcm90YXJhcyA1Mjk2LCBLeXBy!5e0!3m2!1scs!2scz!4v1749678526121!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </section>
+
+    <!-- Dress Code -->
+    <section class="fade-in" id="dresscode">
+      <h2>Dress-code</h2>
+      <img src="pallete_nobackground.png" alt="Dress Code" style="width:100%;max-width:600px;border-radius:20px;margin-bottom:20px;">
+      
+      <p>Смело выбирайте яркие цвета — сияющий сапфировый, сочную фуксию, клубнично-розовый, апельсиновый, мангово-жёлтый или лимонный. 
+        Мы мечтаем, чтобы наш праздник и вся будущая жизнь были такими же насыщенными и радостными!
+
+Ваши улыбки и присутствие — главное украшение дня, поэтому надевайте то, в чём удобно гулять и танцевать. 
+ Спасибо, что делаете этот момент с нами таким ярким!</p>
+    </section>
+
+    <!-- Gifts -->
+<!--    <section class="fade-in" id="gifts">
+      <h2>Подарки</h2>
+      <p>Ваше присутствие — главный подарок. Если хотите порадовать нас ещё:</p>
+      <a class="btn" href="https://revolut.me/your-link" target="_blank">Вклад в медовый месяц</a>
+      <a class="btn" href="https://amazon.com/your-wishlist" target="_blank">Amazon Wishlist</a>
+    </section>-->
+
+    <!-- Вместо подарков -->
+<section class="fade-in" id="gifts">
+  <h2>Вместо подарков</h2>
+  <p>Нам не нужны ни чемоданы с вещами, ни тюки с барахлом — выберите одно из весёлых “невесомых” подношений:</p>
+
+  <div class="gift-options">
+    <button class="btn" data-gift="poem">Прочитать стих на ужине</button>
+    <button class="btn" data-gift="pan">Выслать сковороду на домашний адрес</button>
+    <button class="btn" data-gift="dance">Стать танцевальным заводилой вечера</button>
+    <button class="btn" data-gift="shell">Принести самую красивую ракушку</button>
+  </div>
+</section>
+<!-- Модальное окно ─ выводит шутливое «поздравление» -->
+<div id="gift-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="gift-message"></p>
+  </div>
+</div>
+
+
+    <!-- Gallery -->
+    <section class="fade-in" id="gallery">
+      <h2>Мы уже влюблены в Кипр</h2>
+   
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <nav>
+      <a href="#hero">Вверх</a>
+      <a href="https://instagram.com/youraccount" target="_blank">Instagram</a>
+      <a href="https://t.me/yourchat"             target="_blank">Telegram-чат гостей</a>
+    </nav>
+    <p>«Любовь — это наше путешествие, а вы — лучшие спутники»</p>
+  </footer>
+
+  <script>
+    /* Countdown */
+    const tDate = new Date('2025-09-23T18:00:00Z'); /* 16:00 EEST */
+    const dEl = document.getElementById('days'),
+          hEl = document.getElementById('hours'),
+          mEl = document.getElementById('minutes'),
+          sEl = document.getElementById('seconds');
+    function tick(){
+      const diff = tDate - Date.now();
+      if(diff<=0) return;
+      const d = Math.floor(diff/864e5),
+            h = Math.floor(diff/36e5)%24,
+            m = Math.floor(diff/6e4)%60,
+            s = Math.floor(diff/1e3)%60;
+      dEl.textContent=d;
+      hEl.textContent=String(h).padStart(2,'0');
+      mEl.textContent=String(m).padStart(2,'0');
+      sEl.textContent=String(s).padStart(2,'0');
+    }
+    tick(); setInterval(tick,1000);
+
+    /* Fade-in on scroll */
+    const io = new IntersectionObserver(e=>e.forEach(ent=>{
+      if(ent.isIntersecting){ent.target.classList.add('visible');io.unobserve(ent.target);}
+    }),{threshold:.2});
+    document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+
+/* Gift-modal jokes */
+const giftMsgs = {
+  poem:  'Поздравляем! Вы выбрали чтение стиха. Тренируйте рифмы в самолёте — багажу это не помешает 😉',
+  pan:   'Бесподобно! Сковорода уже грезит о блинчиках. Пришлите её почтой — и ни грамма перевеса в чемодане.',
+  dance: 'Вот это да! Вы - наш главный танцевальный двигатель. Разомнитесь заранее — пляж будет с вами в шаге.',
+  shell: 'Чудесно! Найдите ракушку, что поместится в карман (и в наш семейный альбом).'
+};
+
+const modal       = document.getElementById('gift-modal');
+const modalText   = document.getElementById('gift-message');
+const closeBtn    = document.querySelector('.modal .close');
+
+document.querySelectorAll('.gift-options .btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    modalText.textContent = giftMsgs[btn.dataset.gift];
+    modal.style.display   = 'flex';
+  });
+});
+closeBtn.onclick = () => modal.style.display = 'none';
+window.onclick   = e => { if(e.target===modal) modal.style.display='none'; };
+
+
+
+  </script>
+
+</body>
+</html>
