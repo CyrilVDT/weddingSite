@@ -70,6 +70,71 @@
 }
 .gift-options{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:25px}
 
+
+/* ──────────────────────────────────────────────── */
+/*  R E S P O N S I V E   T U N I N G             */
+/* ──────────────────────────────────────────────── */
+
+/* Планшеты и «большие» телефоны в альбомной ориентации */
+@media (max-width: 992px){
+
+  section{padding:60px 16px;}
+
+  /* Hero */
+  .hero{background-position:center 35%;}
+  .hero h1{font-size:48px;}
+  .hero p.date{font-size:20px;}
+
+  /* Countdown */
+  .countdown{gap:12px;font-size:24px;}
+  .countdown div{min-width:70px;padding:12px 16px;}
+
+  /* Story bloc – колонки вниз */
+  .story{flex-direction:column-reverse;text-align:center;}
+  .story img{max-width:320px;margin-top:20px;}
+
+  /* Schedule */
+  .schedule table{width:100%;font-size:15px;}
+  .schedule th,.schedule td{padding:10px;}
+
+  /* Gift buttons */
+  .gift-options .btn{flex:1 1 160px;} /* кнопки авто-шириной, но не меньше 160 */
+}
+
+/* Smart-телефоны (портрет ≤ 576 px) */
+@media (max-width: 576px){
+
+  section{padding:48px 12px;}
+
+  /* Hero */
+  .hero{padding:0 10px;}
+  .hero h1{font-size:36px;line-height:1.1;}
+  .hero p.date{font-size:16px;letter-spacing:1px;}
+
+  /* Кнопки */
+  .btn{padding:10px 22px;font-size:14px;}
+
+  /* Countdown – в две строки */
+  .countdown{flex-wrap:wrap;gap:10px;}
+  .countdown div{flex:1 1 120px;margin-top:10px;}
+
+  /* Таблица программы дня – делаем «карточки» */
+  .schedule table,
+  .schedule thead{display:block;}
+  .schedule tr{display:block;border:1px solid #eee;border-radius:10px;margin-bottom:12px;}
+  .schedule th{display:none;}       /* прячем заголовок */
+  .schedule td{display:block;border:none;padding:6px 12px;text-align:left;font-size:14px;}
+  .schedule td:first-child{font-weight:600;}
+
+  /* Галерея – одна колонка */
+  .gallery-grid{grid-template-columns:1fr;}
+  .gallery-grid img{height:220px;}
+
+  /* Модалка – подстраиваем шрифт и отступы */
+  .modal-content{padding:24px;}
+  .modal-content p{font-size:15px;line-height:1.4;}
+}
+
   </style>
 </head>
 
