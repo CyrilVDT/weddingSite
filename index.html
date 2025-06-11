@@ -21,7 +21,7 @@
     section{padding:80px 20px;text-align:center}
     /* ─── Hero ─────────────────────────────────────────────────── */
     .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
-          background:url('hero-bg.jpg') center/cover no-repeat;position:relative;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.4)}
+          background:url('hero_bg.png') center/cover no-repeat;position:relative;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.4)}
     .hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.25)}
     .hero>*{position:relative;z-index:1}
     .hero h1{font-size:64px;margin-bottom:10px}
@@ -84,16 +84,7 @@
 
   <main id="details">
 
-    <!-- Countdown -->
-    <section class="fade-in" id="countdown">
-      <h2>До нашего дня осталось</h2>
-      <div class="countdown" id="timer">
-        <div><span id="days">0</span><br>Дней</div>
-        <div><span id="hours">0</span><br>Часов</div>
-        <div><span id="minutes">0</span><br>Минут</div>
-        <div><span id="seconds">0</span><br>Секунд</div>
-      </div>
-    </section>
+
 
     <!-- Our Story -->
     <section class="story fade-in" id="story">
@@ -110,6 +101,16 @@
       <img src="us_cartoon.png" alt="Наша история" style="display:block;margin:0 auto;width:100%;max-width:400px;border-radius:20px;box-shadow:0 10px 20px rgba(0,0,0,.1)">
     </section>
 
+        <!-- Countdown -->
+    <section class="fade-in" id="countdown">
+      <h2>До нашего дня осталось</h2>
+      <div class="countdown" id="timer">
+        <div><span id="days">0</span><br>Дней</div>
+        <div><span id="hours">0</span><br>Часов</div>
+        <div><span id="minutes">0</span><br>Минут</div>
+        <div><span id="seconds">0</span><br>Секунд</div>
+      </div>
+    </section>
     <!-- Schedule -->
     <section class="schedule fade-in" id="schedule">
       <h2>Программа дня</h2>
